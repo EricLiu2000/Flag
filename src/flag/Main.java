@@ -10,6 +10,8 @@ public class Main {
 		flag.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		flag.setVisible(true);
+		
+		flag.setResizable(false);
 	}
 
 }
