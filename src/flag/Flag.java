@@ -2,6 +2,7 @@ package flag;
 
 import javax.swing.JFrame;
 import java.awt.*;
+import java.awt.event.KeyListener;
 import java.util.Scanner;
 
 public class Flag extends JFrame{
@@ -37,13 +38,18 @@ public class Flag extends JFrame{
 		
 		//Using the same 1.9:1 ratio, we calculate the width
 		width = height*1.9;
-		
-		
+
 		//Sets the size of the JFrame based on user input
 		setSize((int)width, (int)height);
 		
 		//Paints the flag
 		repaint();
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		setVisible(true);
+		
+		setResizable(false);
 	}
 	
 	public void paint(Graphics g) {
