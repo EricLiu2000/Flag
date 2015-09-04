@@ -46,6 +46,9 @@ public class Flag extends JFrame implements ChangeListener{
 	//The JPanel
 	private JPanel panel;
 	
+	/**
+	 * Constructs a new flag, panel, and slider
+	 */
 	public Flag() {
 		
 		//Creates a new JPanel
@@ -85,8 +88,10 @@ public class Flag extends JFrame implements ChangeListener{
 		//Variable for the height of each stripe
 		int stripeHeight = (int) ((flagHeight) * 1/13);
 		
+		//Sets the width of the union
 		unionWidth = flagWidth * .76/1.9;
 		
+		//Sets the height of the union
 		unionHeight = stripeHeight * 7;
 		
 		//Paints stripes
@@ -104,13 +109,12 @@ public class Flag extends JFrame implements ChangeListener{
 			}
 		}
 		
-		//Paints the blue rectangle
+		//Paints the union
 		g.setColor(blue);
 		g.fillRect(0, WINDOW_BAR, (int) unionWidth, (int) unionHeight);
 		
 		//Paints the stars
 		g.setColor(Color.WHITE);
-		
 		
 		//Paints the stars
 		for(int x = 1; x <= 6; x ++) {
@@ -126,7 +130,6 @@ public class Flag extends JFrame implements ChangeListener{
 				star.draw();
 			}
 		}
-
 	}
 
 	/**
@@ -236,5 +239,4 @@ public class Flag extends JFrame implements ChangeListener{
 			setSizeWithDiagonal(slider.getValue());
 		}
 	}
-	
 }

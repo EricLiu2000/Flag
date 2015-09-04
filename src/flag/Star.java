@@ -71,7 +71,9 @@ public class Star extends Polygon {
 		}
 	}
 	
-	//Draws the star
+	/**
+	 * Draws the star
+	 */
 	public void draw() {
 		g.setColor(Color.WHITE);
 		g.fillPolygon(xArray, yArray, 10);
